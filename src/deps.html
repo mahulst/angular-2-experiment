@@ -3,13 +3,13 @@
 <link rel="stylesheet" href="lib/css/ratchet-theme-ios.min.css">
 
 <!-- JS dependencies -->
-<script type="text/javascript" src="lib/fingerblast.min.js"></script>
 <script type="text/javascript" src="lib/es6-shim.js"></script>
 <script type="text/javascript" src="lib/zone.js"></script>
 <script type="text/javascript" src="lib/traceur-runtime.js"></script>
 <script type="text/javascript" src="lib/require.js"></script>
+<script type="text/javascript" src="lib/fingerblast.min.js"></script>
 
-<!-- RequireJS dependencies -->
+<!-- Config -->
 <script>
     require.config({
         paths: {
@@ -33,4 +33,6 @@
         },
         deps: ['templating']
     });
+
+    new FingerBlast(document);
 </script>
