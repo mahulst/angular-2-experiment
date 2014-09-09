@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Edit item</title>
+        <link rel="stylesheet" href="../bower_components/ratchet/dist/css/ratchet.min.css">
+        <link rel="stylesheet" href="../bower_components/ratchet/dist/css/ratchet-theme-ios.min.css">
+    </head>
+    <body>
+
+        <header class="bar bar-nav">
+            <a class="btn btn-link btn-nav pull-left" href="overview_logged_in.html" data-transition="slide-out">
+                <span class="icon icon-left-nav"></span>
+                Overview
+            </a>
+            <h1 class="title">Edit item</h1>
+        </header>
+
+        <div class="content">
+            <form class="content-padded">
+                <input type="text" placeholder="Title" value="Item title">
+                <textarea placeholder="Body text">Item body text</textarea>
+                <a class="btn btn-positive btn-block" href="overview_logged_in.html" data-transition="slide-out">
+                    Save changes
+                </a>
+            </form>
+
+            <div id="loginModal" class="modal active">
+                <header class="bar bar-nav">
+                    <h1 class="title">My App</h1>
+                </header>
+
+                <div class="content">
+                    <form class="content-padded">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <a class="btn btn-positive btn-block" href="#loginModal">
+                            Log in
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="../bower_components/ratchet/dist/js/ratchet.min.js"></script>
+        <script src="../bower_components/fingerblast/dist/fingerblast.min.js"></script>
+        <script>
+            var fingerBlast = new FingerBlast(document);
+        </script>
+
+    </body>
+</html>

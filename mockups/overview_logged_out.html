@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My App</title>
+        <link rel="stylesheet" href="../bower_components/ratchet/dist/css/ratchet.min.css">
+        <link rel="stylesheet" href="../bower_components/ratchet/dist/css/ratchet-theme-ios.min.css">
+    </head>
+    <body>
+
+        <header class="bar bar-nav">
+            <a class="btn btn-link btn-nav pull-left" href="#loginModal">Log out</a>
+            <a class="icon icon-compose pull-right" href="#createModal"></a>
+            <h1 class="title">My App</h1>
+        </header>
+
+        <div class="content">
+            <ul class="table-view">
+                <li class="table-view-cell">
+                    <a class="navigate-right" href="edit_item_logged_in.html" data-transition="slide-in">
+                        Item title
+                    </a>
+                </li>
+                <li class="table-view-cell">
+                    <a class="navigate-right" href="edit_item_logged_in.html" data-transition="slide-in">
+                        Item title
+                    </a>
+                </li>
+                <li class="table-view-cell">
+                    <a class="navigate-right" href="edit_item_logged_in.html" data-transition="slide-in">
+                        Item title
+                    </a>
+                </li>
+            </ul>
+
+            <div id="createModal" class="modal">
+                <header class="bar bar-nav">
+                    <a class="icon icon-close pull-right" href="#createModal"></a>
+                    <h1 class="title">Create new item</h1>
+                </header>
+
+                <div class="content">
+                    <form class="content-padded">
+                        <input type="text" placeholder="Title">
+                        <textarea placeholder="Body text"></textarea>
+                        <a class="btn btn-positive btn-block" href="#createModal">
+                            Save item
+                        </a>
+                    </form>
+                </div>
+            </div>
+
+            <div id="loginModal" class="modal active">
+                <header class="bar bar-nav">
+                    <h1 class="title">My App</h1>
+                </header>
+
+                <div class="content">
+                    <form class="content-padded">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <a class="btn btn-positive btn-block" href="#loginModal">
+                            Log in
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="../bower_components/ratchet/dist/js/ratchet.min.js"></script>
+        <script src="../bower_components/fingerblast/dist/fingerblast.min.js"></script>
+        <script>
+            var fingerBlast = new FingerBlast(document);
+        </script>
+
+    </body>
+</html>
