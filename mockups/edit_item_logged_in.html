@@ -13,16 +13,19 @@
                 <span class="icon icon-left-nav"></span>
                 Overview
             </a>
+            <a class="btn pull-right" href="overview_logged_in.html" data-transition="slide-out">
+                Save changes
+            </a>
+
             <h1 class="title">Edit item</h1>
         </header>
 
         <div class="content">
-            <form class="content-padded">
-                <input type="text" placeholder="Title" value="Item title">
-                <textarea placeholder="Body text">Item body text</textarea>
-                <a class="btn btn-positive btn-block" href="overview_logged_in.html" data-transition="slide-out">
-                    Save changes
-                </a>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Title" value="Item title">
+                    <textarea placeholder="Body text" rows="15">Item body text</textarea>
+                </div>
             </form>
         </div>
 
