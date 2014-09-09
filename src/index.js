@@ -9,7 +9,7 @@ export class App {
             config.title = document.title;
 
             config.map([
-                { pattern: [''], componentUrl: 'routes/overview', title: 'Overview' }
+                { pattern: [''], componentUrl: 'routes/overview' }
             ]);
         });
     }
