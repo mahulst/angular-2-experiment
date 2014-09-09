@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-config="directives">
+    <head>
+        <script type="text/javascript" src="lib/platform.js"></script>
+        <link href="deps.html" rel="import">
+
+        <title>My App</title>
+    </head>
+    <body>
+
+        <header class="bar bar-nav">
+            <button class="btn btn-link btn-nav pull-left">
+                Log out
+            </button>
+            <button class="btn btn-link pull-right">
+                <span class="icon icon-compose"></span>
+            </button>
+
+            <h1 class="title">My App</h1>
+        </header>
+
+        <div class="content">
+            <router-view-port></router-view-port>
+        </div>
+    </body>
+</html>

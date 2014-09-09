@@ -4,8 +4,26 @@
   "description": "Exercises for the workshop 'Hands-On Angular 2'.",
   "main": "index.html",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "di": "git://github.com/angular/di.js#injectparent",
+    "expressionist": "git://github.com/angular/expressionist.js",
+    "watchtower": "git://github.com/angular/watchtower.js",
+    "zone.js": "git://github.com/angular/zone.js",
+    "router": "git://github.com/angular/router",
+    "traceur": "git://github.com/vojtajina/traceur-compiler#add-es6-pure-transformer-dist",
+    "templating": "git://github.com/angular/templating",
+    "route-recognizer": "^0.1.0",
+    "es6-shim": "0.9.3",
+    "requirejs": "^2.1.11",
+    "rtts-assert": "git://github.com/angular/assert"
+  },
   "devDependencies": {
-      "bower": "~1.3.9"
+    "bower": "~1.3.9",
+    "gulp-rimraf": "~0.1.0",
+    "gulp-traceur": "vojtajina/gulp-traceur#traceur-as-peer",
+    "pipe": "git://github.com/angular/pipe#remove-transitive-deps",
+    "gulp": "~3.8.8",
+    "run-sequence": "~0.3.6",
+    "event-stream": "~3.1.7"
   }
 }
