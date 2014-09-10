@@ -7,9 +7,10 @@ export var itemsOptions = {
 @Inject
 export function items() {
     var rows = [];
+    var i = 0;
 
-    for (var i = itemsOptions.amount; i > 0; --i) {
-        rows.unshift({
+    while (++i <= itemsOptions.amount) {
+        rows.push({
             id: i,
             title: 'Item title ' + i,
             body: 'Item body ' + i
@@ -22,13 +23,13 @@ export function items() {
 @Inject(items)
 export function itemExists(items) {
     return function(id) {
-        return !!items[id -1];
+        return !!items[id - 1];
     };
 }
 
 @Inject(items)
 export function getItem(items) {
     return function(id) {
-        return items[id -1];
+        return items[id - 1];
     };
 }
