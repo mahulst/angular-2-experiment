@@ -1,4 +1,12 @@
 <template ng-config="directives">
+
+    <title-bar-content>
+        <a class="btn btn-link btn-nav pull-left" href="#/">
+            <span class="icon icon-left-nav"></span>
+            Overview
+        </a>
+    </title-bar-content>
+
     <p>this is the detail view</p>
     <p ng-if bind-ng-if="!!item.title">item title: {{ item.title }}</p>
     <p ng-if bind-ng-if="!!item.body">item body: {{ item.body }}</p>
