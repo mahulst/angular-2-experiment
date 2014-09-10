@@ -9,7 +9,16 @@
     <body>
 
         <header class="bar bar-nav">
-            <h1 class="title">My App</h1>
+            <h1 class="title cloak"
+                ng-if
+                bind-ng-if="router.currentInstruction.config.title && router.currentInstruction.fragment != ''">
+                {{ router.currentInstruction.config.title }}
+            </h1>
+            <h1 class="title cloak"
+                ng-if
+                bind-ng-if="!router.currentInstruction.config.title || router.currentInstruction.fragment == ''">
+                {{ router.title }}
+            </h1>
         </header>
 
         <div class="content">

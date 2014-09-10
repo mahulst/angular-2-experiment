@@ -1,0 +1,6 @@
+<template ng-config="directives">
+    <p>this is the detail view</p>
+    <p ng-if bind-ng-if="!!item.title">item title: {{ item.title }}</p>
+    <p ng-if bind-ng-if="!!item.body">item body: {{ item.body }}</p>
+    <p ng-if bind-ng-if="!item.title && !item.body">new item with empty values</p>
+</template>

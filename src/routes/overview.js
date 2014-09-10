@@ -1,8 +1,11 @@
 import {ComponentDirective} from 'templating';
+import {Inject} from 'di';
+import {items} from 'services';
 
 @ComponentDirective({selector: 'overview'})
+@Inject(items)
 export class Overview {
-    constructor() {
-        console.log('[routes/overview] instantiated');
+    constructor(items) {
+        this.items = items;
     }
 }
