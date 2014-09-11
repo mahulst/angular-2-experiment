@@ -1,7 +1,7 @@
 {
   "name": "hands-on-angular-2",
   "version": "0.0.0",
-  "description": "Exercises for the workshop 'Hands-On Angular 2'.",
+  "description": "Exercise repository for the \"Hands-On Angular 2\" workshop.",
   "main": "index.html",
   "private": true,
   "dependencies": {
