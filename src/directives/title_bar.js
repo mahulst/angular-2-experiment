@@ -37,7 +37,7 @@ export class TitleBarContent {
     }
 }
 
-@TemplateDirective({selector: 'title-bar-transclude'})
+@TemplateDirective({selector: 'title-bar-view-port'})
 @Inject(ViewPort, BoundViewFactory, TitleBar)
 export class TitleBarTransclude {
     constructor(viewPort, viewFactory, titleBar) {
