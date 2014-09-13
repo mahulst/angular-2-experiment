@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="lib/css/ratchet-theme-ios.min.css">
 
 <style>
-    .cloak { display: none !important; }
+    .ng-cloak, .ng-hide { display: none !important; }
 </style>
 
 <!-- JS dependencies -->
@@ -13,8 +13,12 @@
 <script type="text/javascript" src="lib/require.js"></script>
 <script type="text/javascript" src="lib/fingerblast.min.js"></script>
 
-<!-- Config -->
 <script>
+
+    // Uncomment this line if you want to do stuff with touch events on Ratchet components:
+    // new FingerBlast(document);
+
+    // RequireJS config
     require.config({
         paths: {
             'libPath': 'lib',
@@ -37,6 +41,4 @@
         },
         deps: ['templating']
     });
-
-    new FingerBlast(document);
 </script>
