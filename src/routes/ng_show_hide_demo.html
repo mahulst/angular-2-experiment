@@ -1,0 +1,20 @@
+<template ng-config="directives">
+
+    <div class="bar bar-standard bar-header-secondary">
+        <button class="btn" on-click="toggleA()">Toggle A visibility</button>
+        <button class="btn" on-click="toggleB()">Toggle B visibility</button>
+    </div>
+
+    <div class="content">
+        <ul class="table-view">
+            <li class="table-view-divider">ng-show</li>
+            <li class="table-view-cell" ng-show bind-ng-show="!isShownA && !isShownB"><p>(none shown)</p></li>
+            <li class="table-view-cell" ng-show bind-ng-show="isShownA">A</li>
+            <li class="table-view-cell" ng-show bind-ng-show="isShownB">B</li>
+            <li class="table-view-divider">ng-hide</li>
+            <li class="table-view-cell" ng-hide bind-ng-hide="isShownA || isShownB"><p>(none shown)</p></li>
+            <li class="table-view-cell" ng-hide bind-ng-hide="!isShownA">A</li>
+            <li class="table-view-cell" ng-hide bind-ng-hide="!isShownB">B</li>
+        </ul>
+    </div>
+</template>
