@@ -9,12 +9,12 @@
     <body>
 
         <header class="bar bar-nav">
-            <h1 class="title cloak"
+            <h1 class="title ng-cloak"
                 ng-if
                 bind-ng-if="router.currentInstruction.config.title && router.currentInstruction.fragment != ''">
                 {{ router.currentInstruction.config.title }}
             </h1>
-            <h1 class="title cloak"
+            <h1 class="title ng-cloak"
                 ng-if
                 bind-ng-if="!router.currentInstruction.config.title || router.currentInstruction.fragment == ''">
                 {{ router.title }}

@@ -11,7 +11,8 @@ export class App {
             config.map([
                 { pattern: '', componentUrl: 'routes/overview', title: 'Overview' },
                 { pattern: 'new', componentUrl: 'routes/detail', title: 'Create new item' },
-                { pattern: 'edit/:id', componentUrl: 'routes/detail', title: 'Edit item' }
+                { pattern: 'edit/:id', componentUrl: 'routes/detail', title: 'Edit item' },
+                { pattern: 'ng-show-hide-demo', componentUrl: 'routes/ng_show_hide_demo', title: 'NgShow/NgHide demo' }
             ]);
         });
     }

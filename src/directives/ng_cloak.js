@@ -1,10 +1,10 @@
 import {DecoratorDirective} from 'templating';
 import {Inject} from 'di';
 
-@DecoratorDirective({selector: '.cloak'})
+@DecoratorDirective({selector: '.ng-cloak'})
 @Inject(Node)
-export class Cloak {
+export class NgCloak {
     constructor(element) {
-        element.classList.remove('cloak');
+        element.classList.remove('ng-cloak');
     }
 }
