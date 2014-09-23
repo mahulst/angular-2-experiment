@@ -25,9 +25,9 @@ export class TitleBarContent {
     constructor(titleBar, viewFactory, context) {
         this.titleBar = titleBar;
         this.content = {
-			viewFactory: viewFactory,
-			context: context
-		};
+            viewFactory: viewFactory,
+            context: context
+        };
     }
 
     diAttached() {
@@ -56,15 +56,15 @@ export class TitleBarViewPort {
         }
 
         this.attachedContent = this.titleBar.content[this.titleBar.content.length - 1];
-		this.attachedContent.viewFactory.viewPort = this.viewPort;
+        this.attachedContent.viewFactory.viewPort = this.viewPort;
 
         this.attachedView = this.attachedContent.viewFactory.createView({
-			executionContext: this.attachedContent.context
-		});
+            executionContext: this.attachedContent.context
+        });
 
         this.attachedView.appendTo(this.viewPort);
 
-		// TODO: The view port that shares its execution context with <title-bar-content> is not flushing
-		// at the appropriate moments (e.g., when using [on-click=""] while appended to <title-bar-view-port>)
+        // TODO: The view port that shares its execution context with <title-bar-content> is not flushing
+        // at the appropriate moments (e.g., when using [on-click=""] while appended to <title-bar-view-port>)
     }
 }
