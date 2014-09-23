@@ -4,6 +4,7 @@ var rimraf = require('gulp-rimraf');
 var traceur = require('gulp-traceur');
 var runSequence = require('run-sequence');
 var mergeStreams = require('event-stream').merge;
+var webserver = require('gulp-webserver');
 
 var path = {
     src: ['./src/**/*.js'],
@@ -76,4 +77,11 @@ gulp.task('watch', ['build'], function() {
         return path.deps[key];
     });
     gulp.watch([deps], ['build_deps']);
+});
+
+gulp.task('serve', ['build'], function() {
+	gulp.src('dist')
+		.pipe(webserver({
+			open: true
+		}));
 });

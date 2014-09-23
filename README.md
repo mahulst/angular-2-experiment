@@ -17,9 +17,9 @@ Also included are:
  
 1. `npm i`
 2. `bower i`
-3. `gulp watch`
-
-Currently assuming that you run your own local server. Probably I'll add a gulp solution for it soon.
+3. then, in separate terminal tabs:
+    - `gulp serve` (will keep running until you stop it with `ctrl+c`)
+    - `gulp watch` (will keep running until you stop it with `ctrl+c`)
 
 
 ## Exercise ideas
