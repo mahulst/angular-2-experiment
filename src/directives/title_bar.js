@@ -1,8 +1,7 @@
 import {TemplateDirective, BoundViewFactory, ViewPort, AttachAware} from 'templating';
 import {Inject} from 'di';
 
-@Inject
-class TitleBar {
+export class TitleBar {
     constructor() {
         this.viewFactories = [];
     }
@@ -38,11 +37,10 @@ export class TitleBarContent {
 }
 
 @TemplateDirective({selector: 'title-bar-view-port'})
-@Inject(ViewPort, BoundViewFactory, TitleBar)
+@Inject(ViewPort, TitleBar)
 export class TitleBarTransclude {
-    constructor(viewPort, viewFactory, titleBar) {
+    constructor(viewPort, titleBar) {
         this.viewPort = viewPort;
-        this.viewFactory = viewFactory;
         this.titleBar = titleBar;
         Object.observe(this.titleBar.viewFactories, () => {
             this.viewFactoriesChanged();
