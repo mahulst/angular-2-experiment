@@ -8,7 +8,6 @@ var mergeStreams = require('event-stream').merge;
 var path = {
     src: ['./src/**/*.js'],
     srcCopy: ['./src/**/*.html'],
-//    test: ['./test/**/*.js'],
     deps: {
         'watchtower': './node_modules/watchtower/src/**/*.js',
         'expressionist': './node_modules/expressionist/src/**/*.js',
@@ -33,11 +32,10 @@ var path = {
         './node_modules/route-recognizer/dist/route-recognizer.amd.js'
     ],
     output: 'dist'
-//    outputTest: 'dist_test'
 };
 
 gulp.task('rimraf', function() {
-    return gulp.src([path.output/*, path.outputTest*/], {read: false})
+    return gulp.src([path.output], {read: false})
         .pipe(rimraf());
 });
 
@@ -49,12 +47,6 @@ gulp.task('build_source', function() {
         .pipe(gulp.dest(path.output));
     return mergeStreams(sourceStream, assetStream);
 });
-
-//gulp.task('build_test', function() {
-//    return gulp.src(path.test)
-//        .pipe(traceur(pipe.traceur({modules: 'inline', asyncFunctions: true})))
-//        .pipe(gulp.dest(path.outputTest));
-//});
 
 var createDepStream = function(prop) {
     return gulp.src(path.deps[prop])
@@ -73,14 +65,13 @@ gulp.task('build_deps', function() {
 gulp.task('build', function(done) {
     runSequence(
         'rimraf',
-        ['build_source', 'build_deps'/*, 'build_test'*/],
+        ['build_source', 'build_deps'],
         done
     );
 });
 
 gulp.task('watch', ['build'], function() {
     gulp.watch([path.src, path.srcCopy], ['build_source']);
-//    gulp.watch([path.test], ['build_test']);
     var deps = Object.keys(path.deps).map(function(key) {
         return path.deps[key];
     });
