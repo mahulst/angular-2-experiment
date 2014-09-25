@@ -1,1 +1,1 @@
-export * from './items';
+export * from './dummy_content';

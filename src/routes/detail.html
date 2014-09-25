@@ -5,10 +5,23 @@
             <span class="icon icon-left-nav"></span>
             Overview
         </a>
+
+        <button class="btn btn-nav pull-right" ng-if bind-ng-if="isNew">
+            Create item
+        </button>
+        <button class="btn btn-nav pull-right" ng-if bind-ng-if="!isNew">
+            Save changes
+        </button>
     </title-bar-content>
 
-    <p>this is the detail view</p>
-    <p ng-if bind-ng-if="!!item.title">item title: {{ item.title }}</p>
-    <p ng-if bind-ng-if="!!item.body">item body: {{ item.body }}</p>
-    <p ng-if bind-ng-if="!item.title && !item.body">new item with empty values</p>
+    <form class="input-group">
+        <div class="input-row">
+            <label>Title</label>
+            <input type="text" value="{{ item.title }}">
+        </div>
+        <div class="input-row">
+            <label>Body</label>
+            <input type="text" value="{{ item.body }}">
+        </div>
+    </form>
 </template>

@@ -1,8 +1,6 @@
 import {DecoratorDirective} from 'templating';
 import {Inject} from 'di';
 
-export var ngHideClassName = 'ng-hide';
-
 @DecoratorDirective({
     selector: '[ng-show]',
     bind: {
@@ -17,9 +15,8 @@ export class NgShow {
     constructor(element) {
         this.element = element;
     }
-
     ngShowChanged(value) {
-        this.element.classList[!value ? 'add' : 'remove'](ngHideClassName);
+        this.element.classList[!value ? 'add' : 'remove']('ng-hide');
     }
 }
 
@@ -37,8 +34,7 @@ export class NgHide {
     constructor(element) {
         this.element = element;
     }
-
     ngHideChanged(value) {
-        this.element.classList[!!value ? 'add' : 'remove'](ngHideClassName);
+        this.element.classList[!!value ? 'add' : 'remove']('ng-hide');
     }
 }

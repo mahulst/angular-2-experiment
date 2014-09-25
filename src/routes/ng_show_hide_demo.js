@@ -7,11 +7,9 @@ export class Detail {
         this.isShownA = false;
         this.isShownB = false;
     }
-
     toggleA() {
         this.isShownA = !this.isShownA;
     }
-
     toggleB() {
         this.isShownB = !this.isShownB;
     }

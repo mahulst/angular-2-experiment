@@ -1,19 +1,21 @@
 import {ComponentDirective} from 'templating';
 import {Inject} from 'di';
-import {itemExists, getItem} from 'services';
+import {contentExists, contentItem} from 'services';
 
 @ComponentDirective({selector: 'detail'})
-@Inject(itemExists, getItem)
+@Inject(contentExists, contentItem)
 export class Detail {
-    constructor(itemExists, getItem) {
-        this.itemExists = itemExists;
-        this.getItem = getItem;
+    constructor(contentExists, contentItem) {
+        this.contentExists = contentExists;
+        this.contentItem = contentItem;
     }
 
     activate(params) {
         if (params.id) {
-            this.item = this.getItem(params.id);
+            this.isNew = false;
+            this.item = this.contentItem(params.id);
         } else {
+            this.isNew = true;
             this.item = {
                 title: '',
                 body: ''
@@ -22,6 +24,6 @@ export class Detail {
     }
 
     canActivate(params) {
-        return (params.id && this.itemExists(params.id)) || !params.id;
+        return (params.id && this.contentExists(params.id)) || !params.id;
     }
 }

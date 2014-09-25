@@ -80,8 +80,8 @@ gulp.task('watch', ['build'], function() {
 });
 
 gulp.task('serve', ['build'], function() {
-	gulp.src('dist')
-		.pipe(webserver({
-			open: true
-		}));
+    gulp.src('dist')
+        .pipe(webserver({
+            open: true
+        }));
 });
