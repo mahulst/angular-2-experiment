@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository is used for my "Hands-On Angular 2" workshop.
+This repository is used for my "Hands-On Angular 2" workshop. It's focused on DI, templating and routing.
 
 It's a complete setup to help you get started with Angular quickly, without having to install all the dependencies 
 manually (there are a lot of them). 
@@ -28,8 +28,8 @@ You can create your own exercise during the workshop. If you need inspiration, h
 
 ### Level 1, "Can I play, Daddy?", the easiest
 
-- Look at an included example directive/route/service, then delete it and try to rebuild it
-- Build a component directive for [Ratchet toggles](http://goratchet.com/components/#toggles)
+- Build NgClass (included NgShow/NgHide examples can help you get started)
+- Build a directive for [Ratchet toggles](http://goratchet.com/components/#toggles)
 
 ### Level 2, "Bring 'em on!", the default
 
@@ -41,11 +41,15 @@ You can create your own exercise during the workshop. If you need inspiration, h
 ### Level 3, "I am Death incarnate!", the hardest
 
 - Build NgModel 
-  [Simple NgModel starting point](https://github.com/angular/templating/blob/master/src/example/ngmodel/ng-model.js)
-- Build an Http service with interceptor API 
-  [Simple Http starting point](https://github.com/angular/projects/blob/master/src/services/http.js)
-- Improve the 
-  [current implementation of NgRepeat](https://github.com/angular/templating/blob/master/src/lib/directive/ng_repeat.js) 
-  with incremental view updating
+  ([Simple NgModel starting point](https://github.com/angular/templating/blob/master/src/example/ngmodel/ng-model.js))
+- Add incremental view updating to 
+  [NgRepeat](https://github.com/angular/templating/blob/master/src/lib/directive/ng_repeat.js)
 
 (Level names taken from [Wolfenstein](https://www.youtube.com/watch?v=DnmkA8uX3Sw) :-) )
+
+
+## Resources
+
+- [DI examples](https://github.com/angular/di.js/tree/master/example)
+- [Templating examples](https://github.com/angular/templating/tree/master/src/example)
+- [Router examples](https://github.com/angular/router/tree/master/examples)
