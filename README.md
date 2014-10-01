@@ -35,6 +35,9 @@ You can create your own exercise during the workshop. If you need inspiration, h
 
 - Build NgSwitch ([NgIf implementation](https://github.com/angular/templating/blob/master/src/lib/directive/ng_if.js) 
   can help you get started)
+- Build directives for [Ratchet segmented controls](http://goratchet.com/components/#segmentedControls),
+  using "queryables" to connect content sections 
+  ([tab example](https://github.com/angular/templating/tree/master/src/example/tab) can help you get started)
 - Build directives for [Ratchet popovers](http://goratchet.com/components/#popovers)
 - Build directives and/or router integration for [Ratchet modals](http://goratchet.com/components/#modals)
 
@@ -53,3 +56,5 @@ You can create your own exercise during the workshop. If you need inspiration, h
 - [DI examples](https://github.com/angular/di.js/tree/master/example)
 - [Templating examples](https://github.com/angular/templating/tree/master/src/example)
 - [Router examples](https://github.com/angular/router/tree/master/examples)
+- [Angular 2.0 design docs](https://drive.google.com/?pli=1#folders/0B7Ovm8bUYiUDR29iSkEyMk5pVUk)
+- [Supported directive selectors](https://github.com/angular/templating/blob/5785a2e7b9322e99d3a7f130162cbf3026bff337/test/lib/compiler/selector.spec.js#L254)
